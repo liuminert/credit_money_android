@@ -1,0 +1,1106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.creditgold.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:myxmlns="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GrayBackground"
+    android:orientation="vertical">
+
+    <com.tesu.creditgold.support.PercentRelativeLayout
+        android:id="@+id/pr_head1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/black_background"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <com.tesu.creditgold.support.PercentRelativeLayout
+            android:id="@+id/pr_head"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/head_status"
+            app:layout_widthPercent="50%w">
+
+            <TextView
+                android:id="@+id/tv_normal_user"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="买家中心"
+                android:textColor="@color/tab_background"
+                app:layout_widthPercent="50%w" />
+
+            <TextView
+                android:id="@+id/tv_shop_user"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/tv_normal_user"
+                android:gravity="center"
+                android:text="卖家中心"
+                android:textColor="@color/text_color_black"
+                app:layout_widthPercent="50%w" />
+        </com.tesu.creditgold.support.PercentRelativeLayout>
+
+        <com.tesu.creditgold.support.PercentRelativeLayout
+            android:id="@+id/rl_message"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/nar_information_default" />
+
+            <com.tesu.creditgold.support.PercentRelativeLayout
+                android:id="@+id/rl_message_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/nar_information_tip" />
+
+                <TextView
+                    android:id="@+id/tv_message_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white" />
+            </com.tesu.creditgold.support.PercentRelativeLayout>
+
+        </com.tesu.creditgold.support.PercentRelativeLayout>
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/pr_head1"-->
+        <!--android:background="@color/tab_background"-->
+        <!--android:paddingBottom="46dp">-->
+
+        <com.tesu.creditgold.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/pr_head1"
+            android:paddingBottom="46dp"
+            android:background="@color/tab_background"
+            android:layout_height="match_parent">
+
+            <com.tesu.creditgold.support.PercentRelativeLayout
+                android:id="@+id/pr_normal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <com.tesu.creditgold.support.PercentRelativeLayout
+                    android:id="@+id/rl_nomal_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_heightPercent="53%w">
+                    <com.tesu.creditgold.support.PercentRelativeLayout
+                        android:id="@+id/rl_personal_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <com.tesu.creditgold.widget.CircleImageView
+                        android:id="@+id/iv_myself_img"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/activity_common_right_magging"
+                        android:layout_marginTop="30dp"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/img_avatar"
+                        app:border_color="@color/white"
+                        app:border_width="3dp"
+                        app:layout_heightPercent="25%w"
+                        app:layout_widthPercent="25%w" />
+
+                    <com.tesu.creditgold.support.PercentLinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_common_left_magging"
+                        android:layout_marginTop="30dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_user_tell"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_myself_img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="查看并编辑个人资料"
+                            android:textColor="@color/text_color_gray" />
+                    </com.tesu.creditgold.support.PercentLinearLayout>
+                    </com.tesu.creditgold.support.PercentRelativeLayout>
+                    <View
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@+id/rl_personal_message"
+                        android:background="@color/LineGrayColor" />
+
+                    <TextView
+                        android:id="@+id/tv_available_credit1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_available_credit"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical|center"
+                        android:text="可用额度(元)"
+                        android:textColor="@color/TextDarkGrayColor"
+                        android:textSize="14sp"
+                        app:layout_widthPercent="28%w" />
+
+                    <TextView
+                        android:id="@+id/tv_available_credit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/line2"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical|center"
+                        android:text="0"
+                        android:textColor="@color/text_color_yellow"
+                        android:textSize="14sp"
+                        app:layout_widthPercent="28%w" />
+
+
+                    <View
+                        android:id="@+id/line_credit"
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/line2"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/tv_available_credit1"
+                        android:background="@color/LineGrayColor" />
+
+                    <TextView
+                        android:id="@+id/tv_debt1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_debt"
+                        android:layout_marginTop="2dp"
+                        android:layout_toRightOf="@+id/line_credit"
+                        android:gravity="center_vertical|center"
+                        android:text="总欠款(元)"
+                        android:textColor="@color/TextDarkGrayColor"
+                        android:textSize="14sp"
+                        app:layout_widthPercent="28%w" />
+
+                    <TextView
+                        android:id="@+id/tv_debt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line2"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/line_credit"
+                        android:gravity="center_vertical|center"
+                        android:textColor="@color/text_color_yellow"
+                        android:textSize="14sp"
+                        app:layout_widthPercent="28%w" />
+
+                    <View
+                        android:id="@+id/line_debt"
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/line2"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/tv_debt1"
+                        android:background="@color/LineGrayColor" />
+
+                    <TextView
+                        android:id="@+id/tv_reimbursement1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_reimbursement"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toRightOf="@id/line_debt"
+                        android:gravity="center_vertical|center"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:text="本期待还款(元)"
+                        android:textColor="@color/TextDarkGrayColor"
+                        app:layout_widthPercent="34%w"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_reimbursement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line2"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/line_debt"
+                        android:gravity="center_vertical|center"
+                        app:layout_widthPercent="34%w"
+                        android:paddingLeft="10dp"
+                        android:text="0"
+                        android:textColor="@color/text_color_yellow"
+                        android:textSize="14sp" />
+
+
+                </com.tesu.creditgold.support.PercentRelativeLayout>
+
+                <View
+                    android:id="@+id/line01"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rl_nomal_one"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/LineGrayColor" />
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_below="@id/line01"
+                    android:background="@color/GrayBackground" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/line"
+                    android:orientation="vertical">
+                    <RelativeLayout
+
+                        android:id="@+id/rl_use_credit"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+                        <ImageView
+                            android:id="@+id/iv_use_credit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/icon_apply"/>
+
+                        <TextView
+                            android:id="@+id/tv_use_credit"
+                            android:layout_toRightOf="@+id/iv_use_credit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="额度申请"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/tv_use_credit_message"
+                            android:layout_toLeftOf="@+id/iv_use_credit_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:text="家具厂可以申请额度"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_use_credit_arrow"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/right_list" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/GrayBackground" />
+
+                    <RelativeLayout
+
+                        android:id="@+id/rl_installment"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+                        <ImageView
+                            android:id="@+id/iv_installment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/icon_order"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/iv_installment"
+                            android:layout_marginLeft="10dp"
+                            android:text="我的订单"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/tv_reimbursement_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/iv_installment_arrow"
+                            android:singleLine="true"
+                            android:text="还款日:2017-05-08"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_installment_arrow"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/right_list" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/LineGrayColor" />
+
+                    <RelativeLayout
+
+                        android:id="@+id/rl_authentication"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+                        <ImageView
+                            android:id="@+id/iv_authentication"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/icon_authentication"/>
+
+                        <TextView
+                            android:layout_toRightOf="@+id/iv_authentication"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="我的认证"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/right_list" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/GrayBackground" />
+
+                    <RelativeLayout
+
+                        android:id="@+id/rl_help_center"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+                        <ImageView
+                            android:id="@+id/iv_help_center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/help_help"/>
+
+                        <TextView
+                            android:layout_toRightOf="@+id/iv_help_center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="帮助中心"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/right_list" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/LineGrayColor" />
+
+                    <RelativeLayout
+
+                        android:id="@+id/rl_user_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+                        <ImageView
+                            android:id="@+id/iv_user_setting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/icon_set"/>
+
+                        <TextView
+                            android:layout_toRightOf="@+id/iv_user_setting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="设置"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_office_call"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/right_list" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/GrayBackground" />
+
+                </LinearLayout>
+
+
+
+            </com.tesu.creditgold.support.PercentRelativeLayout>
+
+            <com.tesu.creditgold.support.PercentRelativeLayout
+                android:id="@+id/pr_shoper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/pr_head1"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_total_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="1000"
+                    android:textColor="@color/default_button_color"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_total_balance_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_total_balance"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="总余额(元)"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/midddle_view"
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/tv_total_balance_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/LineGrayColor" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_total_balance_title"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="40dp"
+                    android:text="可用余额(元)"
+                    android:textColor="@color/TextGrayColor"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="40dp"
+                    android:textColor="@color/default_button_color"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_freeze"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_total_balance_title"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toLeftOf="@+id/tv_freeze_title"
+                    android:src="@mipmap/frozen"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_freeze_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_total_balance_title"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="10dp"
+                    android:text="冻结金额(元)"
+                    android:textColor="@color/TextGrayColor"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_freeze_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tv_title"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/default_button_color"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_below="@id/tv_balance"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/GrayBackground" />
+
+                <LinearLayout
+                    android:id="@+id/ll_below"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/line1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+
+                        android:id="@+id/rl_initiating_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_initiationg_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:src="@mipmap/icon_initiatingorder" />
+
+                        <TextView
+                            android:id="@+id/tv_initiating_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/iv_initiationg_order"
+                            android:text="发起订单"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_new"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/tv_initiating_order"
+                            android:src="@mipmap/new_img" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/right_list" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/line3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/LineGrayColor" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_order_management"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_order_management"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:src="@mipmap/icon_orde_management" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/iv_order_management"
+                            android:text="订单管理"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/right_list" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/GrayBackground" />
+
+                    <RelativeLayout
+
+                        android:id="@+id/rl_transaction_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_transaction_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:src="@mipmap/icon_details" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/iv_transaction_details"
+                            android:text="交易明细"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/right_list" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/LineGrayColor" />
+
+                    <RelativeLayout
+
+                        android:id="@+id/rl_withdrawal"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_withdrawal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:src="@mipmap/icon_withdrawals" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/iv_withdrawal"
+                            android:text="提现"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/right_list" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/GrayBackground" />
+
+                    <RelativeLayout
+
+                        android:id="@+id/rl_shop_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="49dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_shop_setting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:src="@mipmap/icon_set" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/iv_shop_setting"
+                            android:text="设置"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/right_list" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/GrayBackground" />
+                </LinearLayout>
+
+            </com.tesu.creditgold.support.PercentRelativeLayout>
+
+            <com.tesu.creditgold.support.PercentRelativeLayout
+                android:id="@+id/rl_shop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/pr_head1"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:src="@mipmap/cooperation"
+                    app:layout_heightPercent="66%w"
+                    app:layout_widthPercent="66%w" />
+
+                <ImageView
+                    android:id="@+id/iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_title"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginRight="55dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@mipmap/step_display" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="提交开店申请"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="通过资质审核"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/iv"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="合作成功"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="17sp" />
+
+                <Button
+                    android:id="@+id/btn_request"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/tv2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@mipmap/btn_sub"
+                    android:text="立即申请合作"
+                    android:textColor="@color/tab_background"
+                    android:textSize="20sp" />
+            </com.tesu.creditgold.support.PercentRelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_commit_success"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/pr_head1"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_success"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:scaleType="center"
+                    android:src="@mipmap/success" />
+
+                <TextView
+                    android:id="@+id/tv_success"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_success"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="提交成功"
+                    android:textColor="@color/default_button_color"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/tv_wait"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_success"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="资料已提交成功,审核中,请耐心等待......"
+                    android:textColor="@color/text_color_gray" />
+
+                <TextView
+                    android:id="@+id/tv_tell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_wait"
+                    android:layout_below="@id/tv_wait"
+                    android:layout_marginTop="5dp"
+                    android:text="客服电话: 400-6626-985"
+                    android:textColor="@color/text_color_gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_fail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/pr_head1"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_fail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:src="@mipmap/failure" />
+
+                <TextView
+                    android:id="@+id/tv_fail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_fail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="审核失败"
+                    android:textColor="@color/default_button_color"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/tv_fail_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_fail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="审核失败，您可以重新提交申请开店"
+                    android:textColor="@color/text_color_gray" />
+
+                <TextView
+                    android:id="@+id/tv_tell_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_fail_msg"
+                    android:layout_below="@id/tv_fail_msg"
+                    android:layout_marginTop="5dp"
+                    android:text="客服电话: 400-6626-985"
+                    android:textColor="@color/text_color_gray" />
+
+                <Button
+                    android:id="@+id/btn_again_request"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/tv_tell_two"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@mipmap/btn_sub"
+                    android:text="重新申请"
+                    android:textColor="@color/tab_background"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_disable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/pr_head1"
+                android:visibility="gone">
+
+                <com.tesu.creditgold.support.PercentLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/mer_disabled" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:text="尊敬的用户,您的商户账号已暂停服务"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:text="如有疑问请联系客服400-6626-985"
+                        android:textColor="@color/text_color_gray" />
+
+                    <TextView
+                        android:id="@+id/tv_telephone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:text="400-6626-985"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp"
+                        android:visibility="gone" />
+                </com.tesu.creditgold.support.PercentLinearLayout>
+            </RelativeLayout>
+        </com.tesu.creditgold.support.PercentRelativeLayout>
+    <!--</ScrollView>-->
+
+
+</com.tesu.creditgold.support.PercentRelativeLayout>

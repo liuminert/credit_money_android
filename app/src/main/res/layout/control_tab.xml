@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_background"
+    tools:context=".SplashActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/GrayBackground">
+
+
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/LineGrayColor"
+            android:dividerHeight="0.5dp" />
+    </RelativeLayout>
+    <!-- 控制事件分发的自定义控件 -->
+
+
+    <LinearLayout
+        android:id="@+id/my_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tab_background"
+        android:orientation="vertical">
+        <!-- 内存区域 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/fl_content_fragment"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+            <!-- 底部导航 -->
+
+            <FrameLayout
+                android:id="@+id/fl_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/transparent">
+
+
+                <RadioGroup
+                    android:id="@+id/rg_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:background="@drawable/tab_consumption_bg"
+                        android:id="@+id/rb_consumption_installment"
+                        style="@style/main_tab_style"
+                        android:checked="true"
+                        android:gravity="center"/>
+
+                    <RadioButton
+                        android:background="@drawable/tab_scan_bg"
+                        android:id="@+id/rb_scan_installment"
+                        style="@style/main_tab_style"
+                        android:gravity="center"/>
+
+                    <RadioButton
+                        android:background="@drawable/tab_myself_bg"
+                        android:id="@+id/rb_my_installment"
+                        style="@style/main_tab_style"
+                        android:gravity="center"
+                      />
+
+                </RadioGroup>
+                <!--<View-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="0.5dp"-->
+                    <!--android:layout_marginTop="15.15dp"-->
+                    <!--android:background="#dcdcdc" />-->
+                <!--<View-->
+                    <!--android:id="@+id/view_bottom_white"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="4.2dp"-->
+                    <!--android:layout_marginTop="15.8dp"-->
+                    <!--android:background="@color/tab_background" />-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="65dp"-->
+                    <!--android:layout_height="70dp"-->
+                    <!--android:layout_gravity="center"-->
+                    <!-->-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/rb_content_ibeacon"-->
+                        <!--android:layout_width="50dp"-->
+                        <!--android:layout_height="50dp"-->
+                        <!--android:layout_alignParentTop="true"-->
+                       <!--android:layout_centerHorizontal="true"-->
+                        <!--android:src="@mipmap/scan_code" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_below="@id/rb_content_ibeacon"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:text="扫描分期"-->
+                        <!--android:textSize="10sp"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--</RelativeLayout>-->
+            </FrameLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

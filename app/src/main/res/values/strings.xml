@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">"秒赊"</string>
+
+    <integer name="remark_lines">6</integer>
+    <integer name="remark_max_length">250</integer>
+    <integer name="bitmap_compress">50</integer>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

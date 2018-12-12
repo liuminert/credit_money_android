@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.creditgold.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@mipmap/img_guide_three"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:id="@+id/tv_skip_three"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"
+        android:text="SKIP"
+        android:textColor="@color/title_text"
+        android:textSize="17sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:textColor="@color/text_color_gray"
+        android:layout_marginBottom="80dp"
+        android:layout_alignParentBottom="true"
+        android:text="立即体验"
+        android:background="@drawable/border"
+        android:id="@+id/startBtn"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        app:layout_heightPercent="7%h"
+        app:layout_marginTopPercent="22%h"
+        />
+</com.tesu.creditgold.support.PercentRelativeLayout>

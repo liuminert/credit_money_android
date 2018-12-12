@@ -1,0 +1,105 @@
+<com.tesu.creditgold.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GrayBackground"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!-- 标题       app:layout_heightPercent="15%h"
+            app:layout_marginLeftPercent="2%w"
+            app:layout_widthPercent="25%w"-->
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        style="@style/tabTitleStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="关于我们"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:textSize="15sp"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.2"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_head"
+        >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_web"
+        android:layout_below="@+id/tv_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color_gray"
+        android:text="官方网址：www.allwood.com.cn"/>
+    <TextView
+        android:id="@+id/tv_tell"
+        android:layout_below="@+id/tv_web"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color_gray"
+        android:text="客服热线：400-6626-985"/>
+
+    <View
+        android:layout_below="@+id/tv_tell"
+        android:id="@+id/line"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/LineGrayColor"/>
+
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/tv_version"
+        android:layout_below="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="版本 v 1.0.0"
+        android:textColor="@color/text_color_gray" />
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/tv1"
+        android:layout_below="@+id/tv_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Copyright @2013-2017"
+        android:textColor="@color/text_color_gray" />
+
+</com.tesu.creditgold.support.PercentRelativeLayout>

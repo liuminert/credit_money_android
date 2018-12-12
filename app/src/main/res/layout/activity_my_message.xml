@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.creditgold.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/GrayBackground"
+    android:orientation="vertical">
+
+    <com.tesu.creditgold.support.PercentRelativeLayout style="@style/tabTitleStyle">
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="我的个人信息"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+
+    <com.tesu.creditgold.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/tab_background">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/LineGrayColor"/>
+
+    <com.tesu.creditgold.support.PercentRelativeLayout
+
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_common_height"
+        android:background="@color/tab_background"
+        android:paddingLeft="@dimen/activity_common_left_magging"
+        android:paddingRight="@dimen/activity_common_right_magging">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="头像"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+        <com.tesu.creditgold.widget.CircleImageView
+            android:id="@+id/iv_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/personal_portrait"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            app:layout_heightPercent="75%h"
+            app:layout_widthPercent="75%h"
+            android:layout_toLeftOf="@+id/iv_head_arrow"/>
+        <ImageView
+            android:id="@+id/iv_head_arrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/right_list" />
+
+
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/activity_common_left_magging"
+        android:background="@color/LineGrayColor"/>
+    <com.tesu.creditgold.support.PercentRelativeLayout
+
+        android:id="@+id/rl_nick_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_common_height"
+        android:background="@color/tab_background"
+        android:paddingLeft="@dimen/activity_common_left_magging"
+        android:paddingRight="@dimen/activity_common_right_magging">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/text_color_gray"
+            android:text="未填写"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_nick_arrow"/>
+        <ImageView
+            android:id="@+id/iv_nick_arrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/right_list" />
+
+
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/activity_common_left_magging"
+        android:background="@color/LineGrayColor"/>
+    <com.tesu.creditgold.support.PercentRelativeLayout
+        android:id="@+id/rl_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_common_height"
+        android:background="@color/tab_background"
+        android:paddingLeft="@dimen/activity_common_left_magging"
+        android:paddingRight="@dimen/activity_common_right_magging">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_pnone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/text_color_gray"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_phone_arrow"/>
+        <ImageView
+            android:id="@+id/iv_phone_arrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/right_list" />
+
+
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/LineGrayColor"/>
+    </com.tesu.creditgold.support.PercentLinearLayout>
+
+</com.tesu.creditgold.support.PercentLinearLayout>

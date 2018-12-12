@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.creditgold.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/tabTitleStyle">
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="实名认证"
+            android:textColor="@color/tab_background"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:padding="10dp"
+        android:background="@color/GrayBackground"
+        android:id="@+id/tv"
+        android:textColor="@color/text_color_gray"
+        android:gravity="center_vertical|left"
+        android:text="您的资料只用于做分期支付认证使用，我们将会严格保密您的隐私信息。"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+
+
+    <com.tesu.creditgold.support.PercentRelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="10%h"
+      >
+
+        <TextView
+            android:id="@+id/tv_photo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_widthPercent="20%w"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:text="真实姓名"
+             />
+
+        <EditText
+            android:id="@+id/et_user_name"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/tv_photo"
+            app:layout_widthPercent="70%w"
+            android:layout_marginLeft="20dp"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:hint="请输入真实姓名"
+            android:singleLine="true"
+            android:textColorHint="@color/TextGrayColor"
+            android:textSize="14sp" />
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/LineGrayColor"
+         />
+
+    <com.tesu.creditgold.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="10%h"
+        >
+
+        <TextView
+            android:id="@+id/tv_pwd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_widthPercent="20%w"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:text="身份证号"
+            />
+
+        <EditText
+            android:id="@+id/et_id_card"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@id/tv_pwd"
+            app:layout_widthPercent="70%w"
+            android:layout_marginLeft="20dp"
+            android:digits="1234567890X"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:hint="请填写身份证号"
+            android:singleLine="true"
+            android:textColorHint="@color/TextGrayColor"
+            android:textSize="14sp" />
+
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/LineGrayColor"
+        />
+    <TextView
+        android:padding="10dp"
+        android:background="@color/GrayBackground"
+        android:textColor="@color/text_color_gray"
+        android:gravity="center"
+        android:text="温馨提示：如果身份证号含有X请输入大写X"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.tesu.creditgold.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        >
+
+        <Button
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btn_login"
+            android:layout_width="0dp"
+            app:layout_widthPercent="95%w"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@mipmap/btn_sub"
+            android:text="下一步"
+            android:textColor="@color/title_text"
+            android:textSize="20sp" />
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+
+
+</com.tesu.creditgold.support.PercentLinearLayout>

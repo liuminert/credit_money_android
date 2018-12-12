@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/tab_background"
+    android:orientation="horizontal">
+    <TextView
+        android:text="1"
+        android:textColor="@color/text_color_gray"
+        android:id="@+id/tv_cur_period"
+        android:gravity="center"
+        android:layout_weight="0.5"
+        android:layout_width="0dp"
+        android:layout_height="40dp" />
+    <TextView
+        android:text="2017-03-08"
+        android:textColor="@color/text_color_gray"
+        android:id="@+id/tv_time"
+        android:gravity="center"
+        android:layout_weight="1.5"
+        android:layout_width="0dp"
+        android:layout_height="40dp" />
+    <TextView
+        android:text="666.33"
+        android:textColor="@color/text_color_gray"
+        android:id="@+id/tv_money"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="40dp" />
+    <TextView
+        android:text="100.00"
+        android:textColor="@color/text_color_gray"
+        android:id="@+id/tv_expiredMoney"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="40dp" />
+    <TextView
+        android:text="已还款"
+        android:textColor="@color/text_color_gray"
+        android:id="@+id/tv_state"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="40dp" />
+
+</LinearLayout>

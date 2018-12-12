@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.creditgold.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.tesu.creditgold.support.PercentRelativeLayout
+        android:id="@+id/prl_title"
+        style="@style/tabTitleStyle">
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="还款详情"
+            android:textColor="@color/tab_background"
+            android:textSize="20sp" />
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+    <View
+        android:id="@+id/line1"
+        android:layout_below="@+id/prl_title"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/LineGrayColor"
+        />
+    <RelativeLayout
+        android:layout_below="@+id/line1"
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/GrayBackground"
+        >
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_order_id"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_height="50dp"
+            android:text="交易单号:"
+            android:textColor="@color/TextGrayColor"
+            android:textSize="14sp" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/line2"
+        android:layout_below="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/LineGrayColor"
+        />
+    <ListView
+        android:layout_below="@id/line2"
+        android:id="@+id/lv_record_info"
+        android:layout_width="match_parent"
+        android:dividerHeight="1dp"
+        android:divider="@color/GrayBackground"
+        android:layout_height="match_parent"></ListView>
+</com.tesu.creditgold.support.PercentRelativeLayout>

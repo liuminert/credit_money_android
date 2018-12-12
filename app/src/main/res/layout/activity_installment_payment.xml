@@ -1,0 +1,362 @@
+<com.tesu.creditgold.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GrayBackground"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!-- 标题       app:layout_heightPercent="15%h"
+            app:layout_marginLeftPercent="2%w"
+            app:layout_widthPercent="25%w"-->
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        style="@style/tabTitleStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="分期支付"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+    </RelativeLayout>
+
+    <com.tesu.creditgold.support.PercentRelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_head"
+        android:layout_centerHorizontal="true">
+
+        <com.tesu.creditgold.support.PercentRelativeLayout
+            android:id="@+id/pr_name"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="0dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/tab_background"
+            app:layout_heightPercent="10%h">
+
+            <TextView
+                android:id="@+id/tv_shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical|left"
+                android:text="店面名称"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:scaleType="center"
+                android:src="@mipmap/right_arrow" />
+        </com.tesu.creditgold.support.PercentRelativeLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_below="@+id/pr_name"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_height="1dp"
+            android:background="@color/LineGrayColor"/>
+        <com.tesu.creditgold.support.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/line"
+            android:background="@color/tab_background"
+            app:layout_heightPercent="86%h">
+
+            <TextView
+                android:id="@+id/tv_money_title"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:textColor="@color/text_color_gray"
+                android:text="分期金额"
+                app:layout_heightPercent="8%h"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:id="@+id/et_money"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_toRightOf="@+id/tv_money_title"
+                android:layout_centerHorizontal="true"
+                android:inputType="number"
+                android:layout_marginLeft="10dp"
+                android:background="@color/tab_background"
+                android:textColor="@color/black"
+                android:maxLength="9"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="10dp"
+                android:hint="请询问商家后输入"
+                android:textColorHint="@color/hint_text_gray"
+                android:textSize="17sp"
+                app:layout_heightPercent="8%h"
+                android:layout_marginTop="10dp"
+                app:layout_widthPercent="67%w" />
+            <TextView
+                android:layout_below="@+id/et_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                app:layout_marginTopPercent="2%h"
+                android:text="分期金额需为100的整数倍"/>
+            <View
+                android:id="@+id/line1"
+                android:layout_below="@+id/et_money"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/GrayBackground" />
+
+            <TextView
+                android:id="@+id/tv_date_title"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_height="0dp"
+                android:layout_below="@id/line1"
+                android:textColor="@color/text_color_gray"
+                android:gravity="center"
+                android:text="分期期数"
+                android:textSize="17sp"
+                app:layout_heightPercent="8%h"
+                app:layout_marginTopPercent="5%h" />
+
+            <TextView
+                android:id="@+id/tv_date_six"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@id/line1"
+                android:layout_toRightOf="@+id/tv_date_three"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:background="@drawable/border_shape_rect"
+                android:text="6个月"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:layout_heightPercent="8%h"
+                android:layout_marginLeft="10dp"
+                app:layout_marginTopPercent="5%h"
+                app:layout_widthPercent="20%w" />
+
+            <TextView
+                android:id="@+id/tv_date_three"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@id/line1"
+                android:layout_toRightOf="@+id/tv_date_title"
+                android:gravity="center"
+                android:background="@drawable/border_shape_rect"
+                android:text="3个月"
+                android:textColor="@color/black"
+                app:layout_heightPercent="8%h"
+                app:layout_marginTopPercent="5%h"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
+                app:layout_widthPercent="20%w" />
+
+            <TextView
+                android:id="@+id/tv_date_twelve"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@id/line1"
+                android:layout_toRightOf="@id/tv_date_six"
+                android:gravity="center"
+                android:background="@drawable/border_shape_rect"
+                android:text="12个月"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:layout_heightPercent="8%h"
+                app:layout_marginTopPercent="5%h"
+                android:layout_marginLeft="10dp"
+                app:layout_widthPercent="20%w" />
+            <View
+                android:id="@+id/line2"
+                android:layout_below="@+id/tv_date_twelve"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/LineGrayColor" />
+
+            <com.tesu.creditgold.support.PercentRelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/tv_date_twelve"
+                android:layout_width="match_parent"
+                android:background="@color/GrayBackground"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_feel_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_below="@id/line2"
+                    android:textSize="17sp"
+                    android:gravity="center"
+                    android:text="每个月应还 :"
+                    android:textColor="@color/black"
+                    app:layout_heightPercent="8%h"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    />
+                <TextView
+                    android:id="@+id/tv_feel"
+                    android:layout_toRightOf="@id/tv_feel_title"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@id/line2"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textSize="17sp"
+                    android:text="0"
+                    app:layout_heightPercent="8%h"
+                    android:layout_marginTop="10dp"
+                    />
+                <TextView
+                    android:layout_toRightOf="@id/tv_feel"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@id/line2"
+                    android:gravity="center"
+                    android:textSize="17sp"
+                    android:text="元"
+                    android:textColor="@color/black"
+                    app:layout_heightPercent="8%h"
+                    android:layout_marginTop="10dp"
+                    />
+                <TextView
+                    android:layout_toRightOf="@id/tv_feel"
+                    android:id="@+id/tv_poundage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    android:layout_below="@id/tv_date_six"
+                    android:gravity="center_vertical|left"
+                    android:text="+手续费:元"
+                    android:textColor="@color/black"
+                    app:layout_heightPercent="8%h"
+                    app:layout_marginTopPercent="1%h"
+                    />
+            <Button
+                android:background="@mipmap/btn_gray"
+                android:id="@+id/btn_ensure"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tv_poundage"
+                android:enabled="false"
+                android:text="确认分期买单"
+                android:textSize="20sp"
+                app:layout_widthPercent="90%w"
+                android:layout_marginTop="30dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:gravity="center"
+                app:layout_marginTopPercent="2%h"
+                android:layout_toRightOf="@+id/is_checked"
+                android:textSize="13sp"
+                android:layout_below="@id/btn_ensure"
+                android:id="@+id/tv_contract_xieyi"
+                android:textColor="@color/text_color_gray"
+                android:text="我已阅读并同意"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+            <TextView
+                android:gravity="center"
+                android:layout_toRightOf="@+id/tv_contract_xieyi"
+                app:layout_marginTopPercent="2%h"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/default_button_color"
+                android:textSize="13sp"
+                android:layout_marginLeft="3dp"
+                android:layout_below="@id/btn_ensure"
+                android:id="@+id/tv_contract"
+                android:text="借款协议"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+            <TextView
+                android:gravity="center"
+                android:layout_toRightOf="@+id/tv_contract"
+                app:layout_marginTopPercent="2%h"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/text_color_gray"
+                android:textSize="13sp"
+                android:layout_marginLeft="3dp"
+                android:layout_below="@id/btn_ensure"
+                android:id="@+id/tv_contract1"
+                android:text="及"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+            <TextView
+                android:gravity="center"
+                android:layout_toRightOf="@+id/tv_contract1"
+                app:layout_marginTopPercent="2%h"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/default_button_color"
+                android:textSize="13sp"
+                android:layout_marginLeft="3dp"
+                android:layout_below="@id/btn_ensure"
+                android:id="@+id/tv_contract2"
+                android:text="个人信息使用授权书"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+            <TextView
+                android:gravity="center"
+                android:visibility="gone"
+                android:textColor="@color/default_button_color"
+                android:textSize="13sp"
+                android:layout_below="@id/tv_contract_xieyi"
+                android:layout_alignLeft="@+id/tv_contract_xieyi"
+                android:id="@+id/tv_contract3"
+                android:text="息使用授权书"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                app:layout_marginTopPercent="3%w"
+                android:layout_marginRight="5dp"
+                android:layout_below="@id/btn_ensure"
+                android:background="@drawable/checkb_select"
+                android:id="@+id/is_checked"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:button="@null"
+                />
+            </com.tesu.creditgold.support.PercentRelativeLayout>
+        </com.tesu.creditgold.support.PercentRelativeLayout>
+
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+
+
+</com.tesu.creditgold.support.PercentRelativeLayout>

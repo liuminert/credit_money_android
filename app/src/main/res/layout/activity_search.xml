@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.creditgold.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:background="@color/tab_background"
+    android:layout_height="match_parent">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/pr_shop"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    <!-- 标题 -->
+    <com.tesu.creditgold.support.PercentRelativeLayout
+        android:id="@+id/rl_title"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.tesu.creditgold.support.PercentRelativeLayout
+        android:id="@+id/rl_head"
+        style="@style/tabTitleStyle">
+
+
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+
+        <com.tesu.creditgold.support.PercentRelativeLayout
+            android:layout_toRightOf="@id/tv_top_back"
+            android:id="@+id/pr_search_input"
+            android:layout_centerVertical="true"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:background="@drawable/border"
+            >
+
+            <com.tesu.creditgold.support.PercentRelativeLayout
+                android:id="@+id/pr_search"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/et_search"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/icon_search"
+                    android:scaleType="center"
+                    />
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@+id/iv_search"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@null"
+                    android:hint="请输入商家名称"
+                    android:textColorHint="@color/hint_text_gray"
+                    android:inputType="text"
+                    android:paddingLeft="5dp"
+                    android:textSize="13sp" />
+            </com.tesu.creditgold.support.PercentRelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/serch_colose"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/serch_colose"/>
+        </com.tesu.creditgold.support.PercentRelativeLayout>
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+
+    <LinearLayout
+        android:background="@color/tab_background"
+        android:id="@+id/rg"
+        android:layout_below="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_province"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:drawableRight="@mipmap/company_list_down"
+            android:drawablePadding="-10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="8dp"
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:text="省" />
+        <View
+            android:layout_marginTop="10dp"
+            android:background="@color/text_color_gray"
+            android:layout_width="0.5dp"
+            android:layout_height="20dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:drawableRight="@mipmap/company_list_down"
+            android:drawablePadding="-10dp"
+            android:paddingRight="10dp"
+            android:textSize="15sp"
+            android:paddingTop="8dp"
+            android:singleLine="true"
+            android:text="市" />
+        <View
+            android:layout_marginTop="10dp"
+            android:background="@color/text_color_gray"
+            android:layout_width="0.5dp"
+            android:layout_height="20dp"/>
+        <TextView
+            android:id="@+id/tv_district"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:drawableRight="@mipmap/company_list_down"
+            android:drawablePadding="-10dp"
+            android:paddingRight="10dp"
+            android:textSize="15sp"
+            android:paddingTop="8dp"
+            android:singleLine="true"
+            android:text="区/县" />
+    </LinearLayout>
+        <View
+            android:id="@+id/line1"
+            android:layout_below="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/LineGrayColor"/>
+        <View
+            android:id="@+id/line"
+            android:layout_below="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/GrayBackground"
+            />
+        <View
+            android:id="@+id/line2"
+            android:layout_below="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/LineGrayColor"/>
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+
+
+<com.tesu.creditgold.support.PercentLinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_show_message"
+    android:layout_below="@+id/line2"
+    android:layout_marginTop="180dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_widthPercent="40%w"
+        app:layout_heightPercent="40%w"
+        android:src="@mipmap/serch"/>
+    <TextView
+        android:id="@+id/tv_show_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="17sp"
+        android:textColor="@color/TextDarkGrayColor"
+        android:gravity="center_horizontal"
+        android:text="搜索不到相关结果"/>
+</com.tesu.creditgold.support.PercentLinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_goto_top"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="80dp"
+        android:visibility="gone"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/icon_goto_top" />
+</com.tesu.creditgold.support.PercentRelativeLayout>

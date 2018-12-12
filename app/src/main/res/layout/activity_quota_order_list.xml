@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.creditgold.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GrayBackground">
+    <com.tesu.creditgold.support.PercentRelativeLayout
+        android:id="@+id/rl_head"
+        style="@style/tabTitleStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="订单列表"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+
+    <com.tesu.creditgold.support.PercentLinearLayout
+        android:layout_below="@+id/rl_head"
+        android:id="@+id/ll_create_order"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/dark_gray_background"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/plus"
+            android:drawablePadding="5dp"
+            android:textColor="@color/default_button_color"
+            android:textSize="20sp"
+            android:text="创建新订单"/>
+    </com.tesu.creditgold.support.PercentLinearLayout>
+    <View
+        android:id="@+id/line"
+        android:layout_below="@+id/ll_create_order"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/GrayBackground"/>
+    <ListView
+        android:id="@+id/lv_order"
+        android:layout_below="@+id/line"
+        android:divider="@color/GrayBackground"
+        android:dividerHeight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</com.tesu.creditgold.support.PercentRelativeLayout>

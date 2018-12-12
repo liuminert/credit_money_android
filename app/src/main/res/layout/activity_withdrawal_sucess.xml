@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.creditgold.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/tab_background"
+    android:orientation="vertical"
+    context="com.tesu.creditgold.activity.WithdrawalSucessActivity">
+    <RelativeLayout style="@style/tabTitleStyle">
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="提现"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/apply"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
+        android:text="提现申请提交成功"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="17sp"
+        android:textColor="@color/TextGrayColor"
+        android:layout_gravity="center_horizontal"
+        android:text="预计到账时间1个工作日"/>
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/btn_back"
+        android:layout_width="0dp"
+        app:layout_widthPercent="90%w"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@mipmap/btn_sub"
+        android:text="返回"
+        android:textColor="@color/title_text"
+        android:textSize="20sp" />
+</com.tesu.creditgold.support.PercentLinearLayout>

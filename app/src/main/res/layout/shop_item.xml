@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/tab_background">
+
+        <com.tesu.creditgold.widget.XCRoundRectImageView
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/iv_shop"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/img_shoper_avat"/>
+
+        <TextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_shop"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="店铺名称"
+            android:textColor="@color/text_color_black"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+             />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/tv_shop_name"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:id="@+id/tv_address"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_shop"
+            android:text="店铺地址"
+            android:textColor="@color/text_color_gray"
+            android:textSize="13sp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/tv_address"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:id="@+id/tv_tell"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_shop"
+            android:text="电话"
+            android:textColor="@color/text_color_gray"
+            android:textSize="13sp"
+            android:layout_marginRight="10dp"
+            />
+
+        <ImageView
+            android:src="@mipmap/extended"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_good_num"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+          />
+    </RelativeLayout>
+
+</LinearLayout>

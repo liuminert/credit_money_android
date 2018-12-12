@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.creditgold.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical">
+
+
+    <com.tesu.creditgold.support.PercentRelativeLayout
+        android:id="@+id/rl_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="100%w"
+        app:layout_heightPercent="100%w"
+        android:clipChildren="false"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/opinion_photo"
+            android:contentDescription="@string/app_name"/>
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/opinion_photo_close"
+            />
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+    <com.tesu.creditgold.support.PercentRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:id="@+id/rl_add_image"
+        app:layout_heightPercent="100%w"
+        app:layout_widthPercent="100%w"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:src="@drawable/border_shape"/>
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/opinion_photo_add"/>
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+
+</com.tesu.creditgold.support.PercentRelativeLayout>

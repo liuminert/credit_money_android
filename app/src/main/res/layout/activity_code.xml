@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.creditgold.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.tesu.creditgold.support.PercentRelativeLayout
+        android:id="@+id/rl_head"
+        style="@style/tabTitleStyle">
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="店铺二维码"
+            android:textColor="@color/tab_background"
+            android:textSize="20sp" />
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+    <com.tesu.creditgold.support.PercentRelativeLayout
+        android:layout_below="@+id/rl_head"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_shop_name"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_height="40dp"
+            android:text="店铺名称"/>
+        <View
+            android:id="@+id/line"
+            android:layout_below="@+id/tv_shop_name"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/LineGrayColor"/>
+
+    <ImageView
+        android:layout_below="@+id/line"
+        android:layout_centerHorizontal="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_widthPercent="80%w"
+        app:layout_heightPercent="80%w"
+        android:id="@+id/iv_code"
+        android:scaleType="centerCrop"
+        />
+        <com.tesu.creditgold.support.PercentRelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/line"
+            android:layout_centerHorizontal="true"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="80%w"
+            app:layout_heightPercent="80%w">
+            <ImageView
+                android:layout_width="30dp"
+                android:visibility="gone"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/logo"/>
+
+        </com.tesu.creditgold.support.PercentRelativeLayout>
+
+        <TextView
+        android:layout_below="@id/iv_code"
+        android:layout_centerHorizontal="true"
+        android:text="扫码二维码可以找到店铺，进行分期付款"
+        android:textColor="@color/text_color_gray"
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_below="@id/tv"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/text_color_gray"
+        android:layout_marginBottom="20dp"
+        android:text="您可以分享二维码给好友"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+</com.tesu.creditgold.support.PercentRelativeLayout>

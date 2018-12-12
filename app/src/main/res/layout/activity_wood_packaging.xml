@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.creditgold.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_background"
+    android:orientation="vertical"
+    tools:context="com.tesu.creditgold.activity.FurniturePackagingActivity">
+    <com.tesu.creditgold.support.PercentRelativeLayout style="@style/tabTitleStyle">
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="木材分期资料"
+            android:textColor="@color/tab_background"
+            android:textSize="20sp" />
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+    <ScrollView
+        android:id="@+id/sv_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.tesu.creditgold.support.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/step_3"
+                app:layout_heightPercent="9%w" />
+
+            <com.tesu.creditgold.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/default_button_color"
+                    android:text="身份认证"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/default_button_color"
+                    android:text="信息认证"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/default_button_color"
+                    android:text="分期资料认证"
+                    android:textSize="17sp" />
+            </com.tesu.creditgold.support.PercentRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/LineGrayColor"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/GrayBackground" />
+
+            <com.tesu.creditgold.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_employees_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="* 员工数量" />
+
+                <EditText
+                    android:id="@+id/et_employees_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:layout_widthPercent="50%w"
+                    android:hint="请输入工厂员工数量"
+                    android:textColorHint="@color/hint_text_gray"
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/tv_employees_number"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="人"
+                    android:layout_centerVertical="true"/>
+            </com.tesu.creditgold.support.PercentRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/LineGrayColor" />
+
+            <com.tesu.creditgold.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_sales_volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="* 年销售额" />
+
+                <EditText
+                    android:id="@+id/et_sale_volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:inputType="numberDecimal"
+                    app:layout_widthPercent="50%w"
+                    android:textColorHint="@color/hint_text_gray"
+                    android:hint="请输入企业年销售额"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/tv_sales_volume"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="万"
+                    android:layout_centerVertical="true" />
+            </com.tesu.creditgold.support.PercentRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/GrayBackground" />
+            <com.tesu.creditgold.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_manager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="* 企业联合担保人/合伙人/实际掌控人"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/LineGrayColor" />
+                <com.tesu.creditgold.support.PercentLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="wrap_content"
+                        android:text="真实姓名"/>
+                    <EditText
+                        android:id="@+id/et_partner_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="20dp"
+                        android:textColorHint="@color/hint_text_gray"
+                        android:background="@color/white"
+                        android:hint="请输入您的真实姓名"/>
+                </com.tesu.creditgold.support.PercentLinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/LineGrayColor" />
+                <com.tesu.creditgold.support.PercentLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="银行卡号"/>
+                    <EditText
+                        android:id="@+id/et_partner_bank_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="20dp"
+                        android:inputType="number"
+                        android:maxLength="19"
+                        android:textColorHint="@color/hint_text_gray"
+                        android:background="@color/white"
+                        android:hint="请输入您的银行卡号"/>
+                </com.tesu.creditgold.support.PercentLinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/LineGrayColor" />
+                <com.tesu.creditgold.support.PercentLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="身份证号"/>
+                    <EditText
+                        android:id="@+id/et_partner_id_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="20dp"
+                        android:textColorHint="@color/hint_text_gray"
+                        android:maxLength="18"
+                        android:background="@color/white"
+                        android:hint="请输入您的身份证号"/>
+                </com.tesu.creditgold.support.PercentLinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/LineGrayColor" />
+                <com.tesu.creditgold.support.PercentLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/iv_partner_id_card_front_pic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:padding="5dp"
+                        app:layout_heightPercent="30%w"
+                        app:layout_widthPercent="41%w"
+                        android:background="@mipmap/upload_idcard1"/>
+                    <ImageView
+                        android:id="@+id/iv_partner_id_card_reverse_pic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:scaleType="fitXY"
+                        android:padding="5dp"
+                        app:layout_heightPercent="30%w"
+                        app:layout_widthPercent="41%w"
+                        android:background="@mipmap/upload_idcard2"/>
+                </com.tesu.creditgold.support.PercentLinearLayout>
+            </com.tesu.creditgold.support.PercentLinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/GrayBackground" />
+            <TextView
+                android:id="@+id/tv_business_license"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="* 企业营业执照(张数不限)" />
+
+            <com.tesu.creditgold.widget.NoScrollGridView
+                android:id="@+id/gv_add_business_license"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_widthPercent="80%w"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:horizontalSpacing="12dp"
+                android:numColumns="2"
+                android:verticalSpacing="12dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/GrayBackground" />
+            <TextView
+                android:id="@+id/tv_add_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="* 工厂大门照片(需至少上传2张,全景照和门牌号)" />
+
+            <com.tesu.creditgold.widget.NoScrollGridView
+                android:id="@+id/gv_add_shop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_widthPercent="80%w"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:horizontalSpacing="12dp"
+                android:numColumns="2"
+                android:verticalSpacing="12dp"  />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/GrayBackground" />
+            <TextView
+                android:id="@+id/tv_timber_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="* 木材商品照(需至少上传2张)" />
+
+            <com.tesu.creditgold.widget.NoScrollGridView
+                android:id="@+id/gv_timber_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_widthPercent="80%w"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:horizontalSpacing="12dp"
+                android:numColumns="2"
+                android:verticalSpacing="12dp"  />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/GrayBackground" />
+            <TextView
+                android:id="@+id/tv_group_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="* 借款人、木材商和商品合照(需至少上传1张)" />
+
+            <com.tesu.creditgold.widget.NoScrollGridView
+                android:id="@+id/gv_group_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_widthPercent="80%w"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:horizontalSpacing="12dp"
+                android:numColumns="2"
+                android:verticalSpacing="12dp"  />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/GrayBackground" />
+            <TextView
+                android:id="@+id/tv_factory_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="* 工厂地理定位截图(需至少上传1张)" />
+
+            <com.tesu.creditgold.widget.NoScrollGridView
+                android:id="@+id/gv_factory_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_widthPercent="80%w"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:horizontalSpacing="12dp"
+                android:numColumns="2"
+                android:verticalSpacing="12dp"  />
+
+            <TextView
+                android:id="@+id/tv_plant_lease_contract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:text="* 厂房租赁完整合同(需上传全部合同照片)" />
+
+            <com.tesu.creditgold.widget.NoScrollGridView
+                android:id="@+id/gv_plant_lease_contract"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_widthPercent="80%w"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:horizontalSpacing="12dp"
+                android:numColumns="2"
+                android:verticalSpacing="12dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/GrayBackground" />
+            <TextView
+                android:id="@+id/tv_add_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="* 主要产品及有生产过程的现场照片" />
+
+            <com.tesu.creditgold.widget.NoScrollGridView
+                android:id="@+id/gv_add_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_widthPercent="80%w"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:horizontalSpacing="12dp"
+                android:numColumns="2"
+                android:verticalSpacing="12dp"  />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:horizontalSpacing="5dp"
+                android:text="提示：包含成品及加工设备，需至少上传6张不同照片"
+                android:textColor="@color/text_color_gray"
+                android:textSize="13sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/GrayBackground" />
+
+            <TextView
+                android:id="@+id/tv_bill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="* 个人或企业银行回款流水账单" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/GrayBackground" />
+            <com.tesu.creditgold.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/GrayBackground"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/TextGrayColor"
+                    android:text="将准备好的材料打包成压缩包发送到"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/TextGrayColor"
+                    android:text="邮箱：375023700@qq.com"/>
+
+            </com.tesu.creditgold.support.PercentLinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="其他辅助资料" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/GrayBackground" />
+            <com.tesu.creditgold.support.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/GrayBackground"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/TextGrayColor"
+                    android:text="企业借款人代表资信 : 个人央行征信报告"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/TextGrayColor"
+                    android:text="查询地址：https://ipcrs.pbccrc.org.cn"/>
+
+            </com.tesu.creditgold.support.PercentLinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="备注" />
+
+            <EditText
+                android:id="@+id/et_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_shape"
+                android:gravity="top"
+                android:hint="输入您所需要备注的信息"
+                android:textColorHint="@color/hint_text_gray"
+                android:textSize="14sp"
+                android:inputType="textMultiLine"
+                android:maxLength="@integer/remark_max_length"
+                android:minLines="@integer/remark_lines" />
+
+
+            <com.tesu.creditgold.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/GrayBackground"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btn_next"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@mipmap/btn_sub"
+                    android:text="下一步"
+                    android:textColor="@color/title_text"
+                    android:textSize="20sp"
+                    app:layout_widthPercent="95%w" />
+            </com.tesu.creditgold.support.PercentRelativeLayout>
+
+        </com.tesu.creditgold.support.PercentLinearLayout>
+    </ScrollView>
+</com.tesu.creditgold.support.PercentLinearLayout>

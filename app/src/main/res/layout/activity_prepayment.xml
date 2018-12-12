@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.creditgold.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/GrayBackground"
+    android:id="@+id/relative"
+    tools:context="com.tesu.creditgold.activity.PrepaymentActivity">
+
+    <com.tesu.creditgold.support.PercentRelativeLayout style="@style/tabTitleStyle">
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="申请立即还款"
+            android:textColor="@color/tab_background"
+            android:textSize="20sp" />
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+    <View
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/LineGrayColor"
+        />
+    <com.tesu.creditgold.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tab_background"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_periods"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="17sp"
+            android:gravity="center_vertical"
+            android:layout_height="50dp"
+            android:text="申请期数："/>
+    </com.tesu.creditgold.support.PercentLinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_height="0.5dp"
+        android:background="@color/LineGrayColor"/>
+    <com.tesu.creditgold.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tab_background"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="17sp"
+            android:gravity="center_vertical"
+            android:layout_height="50dp"
+            android:text="还款金额："/>
+    </com.tesu.creditgold.support.PercentLinearLayout>
+    <com.tesu.creditgold.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/TextDarkGrayColor"
+            android:layout_marginTop="20dp"
+            android:text="确认后将实时扣款,"/>
+        <TextView
+            android:id="@+id/tv_bank_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/TextDarkGrayColor"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="请确保还款账户（银行卡尾号）余额充足。"/>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="0dp"
+            app:layout_widthPercent="90%w"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@mipmap/btn_sub"
+            android:layout_gravity="center_horizontal"
+            android:text="申请立即还款"
+            android:textColor="@color/title_text"
+            android:layout_marginBottom="10dp"
+            android:textSize="20sp" />
+    </com.tesu.creditgold.support.PercentLinearLayout>
+
+</com.tesu.creditgold.support.PercentLinearLayout>

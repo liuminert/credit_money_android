@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/tab_background"
+    android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_marginLeft="@dimen/activity_common_left_magging"
+    android:layout_marginRight="@dimen/activity_common_right_magging"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:textColor="@color/TextDarkGrayColor"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:layout_height="50dp"
+        android:text="取消"/>
+    <TextView
+        android:layout_alignParentRight="true"
+        android:id="@+id/tv_submit"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="50dp"
+        android:textColor="@color/text_color_yellow"
+        android:textSize="20sp"
+        android:text="确定"/>
+</RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/LineGrayColor"/>
+    <DatePicker
+        android:id="@+id/datePickerStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false" />
+</LinearLayout>

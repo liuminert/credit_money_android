@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/tab_background"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/text_color_black"
+        android:id="@+id/tv_title"
+        android:gravity="bottom"
+        android:textSize="17sp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp" />
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tv_title"
+        android:textColor="@color/text_color_gray"
+        android:id="@+id/tv_time"
+        android:gravity="top"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp" />
+    <TextView
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/text_color_black"
+        android:id="@+id/tv_money"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

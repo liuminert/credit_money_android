@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.creditgold.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/alert_dialog_shape"
+   >
+
+        <com.tesu.creditgold.support.PercentRelativeLayout
+            android:id="@+id/prl_title"
+            style="@style/tabTitleStyle">
+            <TextView
+                android:id="@+id/tv_top_back"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@mipmap/top_back"
+                android:gravity="center_vertical"
+                android:textColor="@color/tab_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="还款详情"
+                android:textColor="@color/defaultBlueColor"
+                android:textSize="20sp" />
+        </com.tesu.creditgold.support.PercentRelativeLayout>
+        <View
+            android:id="@+id/line1"
+            android:layout_below="@+id/prl_title"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="0.5dp"
+            android:background="@color/LineGrayColor"
+            />
+        <RelativeLayout
+            android:layout_below="@+id/line1"
+            android:id="@+id/rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/GrayBackground"
+            >
+            <!--<TextView-->
+                <!--android:layout_marginTop="50dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:gravity="center"-->
+                <!--android:id="@+id/alert_dialog_title"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="还款详情"-->
+                <!--android:textColor="@color/text_color_black"-->
+                <!--android:textSize="17sp" />-->
+                <TextView
+                    android:layout_below="@id/alert_dialog_title"
+                    android:gravity="center"
+                    android:id="@+id/tv_order_id"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="交易单号:"
+                    android:textColor="@color/TextGrayColor"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/tv_order_id"
+                    android:gravity="center"
+                    android:id="@+id/tv_interest"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="每月应还金额 ￥0"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="14sp" />
+            <RelativeLayout
+                android:id="@+id/rl_close"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/img_close"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/rl_title"
+            android:id="@+id/ll_record_info_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:background="@color/tab_background"
+            android:orientation="horizontal">
+            <TextView
+                android:text="期数"
+                android:textColor="@color/text_color_black"
+                android:id="@+id/tv_cur_period"
+                android:gravity="center"
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:text="应还日期"
+                android:textColor="@color/text_color_black"
+                android:id="@+id/tv_time"
+                android:gravity="center"
+                android:layout_weight="1.5"
+                android:layout_width="0dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:text="当期应还"
+                android:textColor="@color/text_color_black"
+                android:id="@+id/tv_money"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:text="逾期费用"
+                android:textColor="@color/text_color_black"
+                android:id="@+id/tv_expiredMoney"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:text="还款状态"
+                android:textColor="@color/text_color_black"
+                android:id="@+id/tv_state"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+        <ListView
+            android:layout_below="@id/ll_record_info_title"
+            android:id="@+id/lv_record_info"
+            android:layout_width="match_parent"
+            android:dividerHeight="1dp"
+            android:divider="@color/GrayBackground"
+            android:layout_height="match_parent"></ListView>
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+
+
+

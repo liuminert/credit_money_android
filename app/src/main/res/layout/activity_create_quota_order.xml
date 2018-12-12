@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.creditgold.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_background">
+    <com.tesu.creditgold.support.PercentRelativeLayout
+        android:id="@+id/rl_head"
+        style="@style/tabTitleStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="创建订单"
+            android:textColor="@color/tab_background"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+    <ImageView
+        android:layout_above="@+id/line"
+        android:layout_below="@+id/rl_head"
+        android:id="@+id/iv_create_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/create_order_explain"/>
+    <View
+        android:id="@+id/line"
+        android:layout_above="@+id/btn_create"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/GrayBackground"/>
+    <Button
+        android:id="@+id/btn_create"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        android:background="@mipmap/btn_sub"
+        android:text="创建订单"
+        android:textColor="@color/white" />
+</com.tesu.creditgold.support.PercentRelativeLayout>

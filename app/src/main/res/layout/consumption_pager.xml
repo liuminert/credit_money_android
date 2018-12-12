@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.creditgold.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.tesu.creditgold.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_pager"
+        android:background="@color/tab_background"
+        android:gravity="center"
+        android:orientation="vertical">
+        <!-- 帧布局 里面有三层 -->
+
+        <com.tesu.creditgold.support.PercentLinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/tab_background"
+            android:orientation="vertical"
+            android:paddingBottom="48dp">
+
+
+            <com.tesu.creditgold.support.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/GrayBackground" />
+
+
+                <com.tesu.creditgold.support.PercentLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center">
+
+                    <View
+                        android:id="@+id/v_dot0"
+                        style="@style/dot_style"
+                        android:background="@drawable/dot_focused" />
+
+                    <View
+                        android:id="@+id/v_dot1"
+                        style="@style/dot_style" />
+
+                    <View
+                        android:id="@+id/v_dot2"
+                        style="@style/dot_style" />
+
+                    <View
+                        android:id="@+id/v_dot3"
+                        style="@style/dot_style" />
+
+                    <View
+                        android:id="@+id/v_dot4"
+                        style="@style/dot_style" />
+                </com.tesu.creditgold.support.PercentLinearLayout>
+                <!--</com.tesu.creditgold.support.PercentLinearLayout>-->
+            </com.tesu.creditgold.support.PercentRelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="消费分期"
+                android:textColor="@color/tab_background"
+                android:textSize="17sp"
+                android:visibility="gone" />
+            <!-- 页签指示部分 -->
+
+            <ListView
+                android:layout_marginTop="10dp"
+                android:id="@+id/lv_shop_type"
+                android:layout_width="match_parent"
+                android:divider="@color/GrayBackground"
+                android:dividerHeight="10dp"
+                android:layout_height="wrap_content"
+                app:layout_heightPercent="100%w"/>
+            <!--<ScrollView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/vp"-->
+                <!--app:layout_heightPercent="100%w">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<include layout="@layout/consumption_first_item" />-->
+
+                    <!--<com.tesu.creditgold.widget.NoScrollGridView-->
+                        <!--android:id="@+id/pr_listview"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:background="@color/GrayBackground"-->
+                        <!--android:divider="@color/transparent"-->
+                        <!--android:horizontalSpacing="1dp"-->
+                        <!--android:numColumns="3"-->
+                        <!--android:verticalSpacing="1dp"></com.tesu.creditgold.widget.NoScrollGridView>-->
+                <!--</LinearLayout>-->
+            <!--</ScrollView>-->
+        </com.tesu.creditgold.support.PercentLinearLayout>
+    </com.tesu.creditgold.support.PercentLinearLayout>
+
+</com.tesu.creditgold.support.PercentRelativeLayout>

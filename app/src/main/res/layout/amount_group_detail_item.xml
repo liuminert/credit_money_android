@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.creditgold.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GrayBackground"
+    android:orientation="vertical" >
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="2017年8月"
+        android:textColor="@color/text_color_black"
+        android:textSize="17sp" />
+    <com.tesu.creditgold.support.PercentLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:paddingBottom="20dp"
+        android:layout_below="@+id/tv_time"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_total_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/TextGrayColor"
+            android:text=""/>
+    </com.tesu.creditgold.support.PercentLinearLayout>
+    <ImageView
+        android:id="@+id/iv_choose"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/choose" />
+
+</com.tesu.creditgold.support.PercentRelativeLayout>

@@ -1,0 +1,94 @@
+<com.tesu.creditgold.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!-- 标题       app:layout_heightPercent="15%h"
+            app:layout_marginLeftPercent="2%w"
+            app:layout_widthPercent="25%w"-->
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        style="@style/tabTitleStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="关于我们"
+            android:textColor="@color/defaultBlueColor"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tv_top_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@mipmap/top_back"
+            android:gravity="center_vertical"
+            android:textColor="@color/tab_background" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/rl_head"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:textColor="@color/defaultBlueColor"
+            android:layout_centerVertical="true"
+            android:id="@+id/line1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="秒赊"
+            android:textSize="35sp"
+            />
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:visibility="invisible"
+        android:textSize="12sp"
+        android:id="@+id/tv"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/text_color_gray" />
+
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/tv1"
+        android:layout_above="@id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Copyright @2013-2016"
+        android:textColor="@color/text_color_gray" />
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/tv_version"
+        android:layout_above="@id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="版本 v 1.0.0"
+        android:textColor="@color/text_color_gray" />
+</com.tesu.creditgold.support.PercentRelativeLayout>

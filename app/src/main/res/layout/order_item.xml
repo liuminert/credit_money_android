@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tesu.creditgold.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.tesu.creditgold.support.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tab_background">
+
+        <TextView
+            android:id="@+id/tv_order_num"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="50dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:textColor="@color/text_color_black"
+            android:textSize="17sp" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_order_num"
+            android:background="@color/LineGrayColor" />
+
+        <com.tesu.creditgold.support.PercentRelativeLayout
+            android:id="@+id/rl_deal_money"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/line1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="交易金额"
+                android:textColor="@color/text_color_gray"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_deal_money"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textSize="17sp" />
+        </com.tesu.creditgold.support.PercentRelativeLayout>
+
+        <com.tesu.creditgold.support.PercentRelativeLayout
+            android:id="@+id/rl_entry_money"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/rl_deal_money">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="入账金额"
+                android:textColor="@color/text_color_gray"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/tv_entry_money"
+                android:background="@color/default_button_color"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_entry_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textSize="17sp" />
+        </com.tesu.creditgold.support.PercentRelativeLayout>
+
+        <com.tesu.creditgold.support.PercentRelativeLayout
+            android:id="@+id/rl_time"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/rl_entry_money">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="时间"
+                android:textColor="@color/text_color_gray"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textSize="17sp" />
+        </com.tesu.creditgold.support.PercentRelativeLayout>
+
+        <com.tesu.creditgold.support.PercentRelativeLayout
+            android:id="@+id/rl_name"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/rl_time">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="用户"
+                android:textColor="@color/text_color_gray"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/text_color_black"
+                android:textSize="17sp" />
+        </com.tesu.creditgold.support.PercentRelativeLayout>
+
+
+    </com.tesu.creditgold.support.PercentRelativeLayout>
+
+</com.tesu.creditgold.support.PercentLinearLayout>
