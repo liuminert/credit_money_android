@@ -596,7 +596,6 @@ public class MainActivity extends BaseActivity {
                         }
                     }
                 } catch (JsonSyntaxException e) {
-
                 }
 
 

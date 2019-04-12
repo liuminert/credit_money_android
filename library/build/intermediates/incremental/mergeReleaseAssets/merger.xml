@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="F:\Android\asprojects\credit_money_android\library\assets"/></dataSet><dataSet config="release"><source path="F:\Android\asprojects\credit_money_android\library\build-types\release\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\asprojects\credit_money_android\library\assets"/></dataSet><dataSet config="release"><source path="D:\asprojects\credit_money_android\library\build-types\release\assets"/></dataSet></merger>
